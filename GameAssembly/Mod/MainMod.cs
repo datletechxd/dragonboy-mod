@@ -17,5 +17,10 @@ namespace GameAssembly.Mod
             }
             return _Instance;
         }
+
+        public static void update()
+        {
+            global::Char.myCharz().cspeed = 8;
+        }
     }
 }

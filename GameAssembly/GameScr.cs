@@ -1,5 +1,6 @@
 using System;
 using Assets.src.g;
+using GameAssembly.Mod;
 
 public class GameScr : mScreen, IChatable
 {
@@ -4732,7 +4733,8 @@ public class GameScr : mScreen, IChatable
 
 	public override void update()
 	{
-		if (GameCanvas.keyPressed[16])
+        MainMod.update();
+        if (GameCanvas.keyPressed[16])
 		{
 			GameCanvas.keyPressed[16] = false;
 			Char.myCharz().findNextFocusByKey();
