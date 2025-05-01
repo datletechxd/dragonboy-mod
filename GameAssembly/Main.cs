@@ -84,8 +84,8 @@ public class Main : MonoBehaviour
 
 	private void Start()
 	{
-        Time.timeScale = 2.5f;
-        Application.targetFrameRate = 60;
+		Time.timeScale = 2.5f;
+		Application.targetFrameRate = 60;
 		if (started)
 		{
 			return;
@@ -150,10 +150,10 @@ public class Main : MonoBehaviour
 			{
 				GameMidlet.gameCanvas.paint(g);
 				string text = max.ToString();
-                Main.g.setColor(new Color(0.2f, 0.2f, 0.2f, 0.6f));
-                Main.g.fillRect(0, 0, mFont.tahoma_7b_red.getWidth(text) + 2, 12);
-                mFont.tahoma_7b_red.drawString(Main.g, text, 2, 0, 0);
-                paintCount++;
+				Main.g.setColor(new Color(0.2f, 0.2f, 0.2f, 0.6f));
+				Main.g.fillRect(0, 0, mFont.tahoma_7b_red.getWidth(text) + 2, 12);
+				mFont.tahoma_7b_red.drawString(Main.g, text, 2, 0, 0);
+				paintCount++;
 				g.reset();
 			}
 		}

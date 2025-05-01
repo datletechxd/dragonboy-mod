@@ -4733,8 +4733,8 @@ public class GameScr : mScreen, IChatable
 
 	public override void update()
 	{
-        MainMod.update();
-        if (GameCanvas.keyPressed[16])
+		MainMod.update();
+		if (GameCanvas.keyPressed[16])
 		{
 			GameCanvas.keyPressed[16] = false;
 			Char.myCharz().findNextFocusByKey();
