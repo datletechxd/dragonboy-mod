@@ -149,7 +149,11 @@ public class Main : MonoBehaviour
 			if (Event.current.type.Equals(EventType.Repaint) && paintCount <= updateCount)
 			{
 				GameMidlet.gameCanvas.paint(g);
-				paintCount++;
+				string text = max.ToString();
+                Main.g.setColor(new Color(0.2f, 0.2f, 0.2f, 0.6f));
+                Main.g.fillRect(0, 0, mFont.tahoma_7b_red.getWidth(text) + 2, 12);
+                mFont.tahoma_7b_red.drawString(Main.g, text, 2, 0, 0);
+                paintCount++;
 				g.reset();
 			}
 		}
