@@ -9,6 +9,8 @@ namespace GameAssembly.Mod
     {
         public static MainMod _Instance;
 
+        public static int runSpeed = 8;
+
         public static MainMod getInstance()
         {
             if (_Instance == null)
@@ -20,7 +22,7 @@ namespace GameAssembly.Mod
 
         public static void update()
         {
-            global::Char.myCharz().cspeed = 8;
+            global::Char.myCharz().cspeed = runSpeed;
         }
     }
 }
