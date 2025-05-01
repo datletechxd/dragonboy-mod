@@ -5385,6 +5385,7 @@ public class GameScr : mScreen, IChatable
 					mFont.tahoma_7_white.drawString(g, "Chơi quá 180 phút một ngày sẽ ảnh hưởng xấu đến sức khỏe.", 25, GameCanvas.h - 70, 0);
 				}
 			}
+			DisplayGameInfo.paint(g);
 			GameCanvas.debug("PA21", 1);
 			GameCanvas.debug("PA18", 1);
 			g.translate(-g.getTranslateX(), -g.getTranslateY());
