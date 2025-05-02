@@ -968,7 +968,7 @@ public class Char : IMapObject
 
 	private Image imgHPtem;
 
-	private bool isPet;
+	public bool isPet;
 
 	private bool isMiniPet;
 
