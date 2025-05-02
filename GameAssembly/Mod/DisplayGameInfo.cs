@@ -29,7 +29,6 @@ namespace GameAssembly.Mod
 				"]"
 			}), 25, GameCanvas.h - 200, 0);
 			mFont.tahoma_7b_white.drawString(g, "Time: " + DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy"), 25, GameCanvas.h - 210, 0);
-			int num = GameCanvas.h - 180;
 		}
 
 		public static bool isBoss(global::Char ch)
