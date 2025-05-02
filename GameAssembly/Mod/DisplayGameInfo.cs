@@ -21,6 +21,7 @@ namespace GameAssembly.Mod
 		public static void paint(mGraphics g)
 		{
 			paintModInfo(g);
+			paintListCharsInMap(g);
 		}
 
 		public static void paintModInfo(mGraphics g)
@@ -52,6 +53,55 @@ namespace GameAssembly.Mod
 				 NinjaUtil.getMoneys((long)ch.cHPFull),
 				 "]"
 			}), GameCanvas.w / 2, 30, 2);
+		}
+
+		public static void paintListCharsInMap(mGraphics g)
+		{
+			int num = 95;
+			int widthRect = 142;
+			int heightRect = 9;
+			for (int i = 0; i < MainMod.listCharsInMap.Count; i++)
+			{
+				global::Char @char = MainMod.listCharsInMap[i];
+				g.setColor(2721889, 0.5f);
+				g.fillRect(GameCanvas.w - widthRect, num + 2, widthRect - 2, heightRect);
+				if (@char.cName != null && @char.cName != "" && !@char.isPet && !@char.isMiniPet && !@char.cName.StartsWith("#") && !@char.cName.StartsWith("$") && @char.cName != "Trọng tài")
+				{
+					string str = string.Concat(new object[]
+					{
+						 @char.cName,
+						 " [",
+						 NinjaUtil.getMoneys((long)@char.cHP),
+						 "]"
+					});
+					bool flag;
+					if (!(flag = isBoss(@char)))
+					{
+						str = string.Concat(new object[]
+						{
+							 @char.cName,
+							 " [",
+							 NinjaUtil.getMoneys((long)@char.cHP),
+							 " - ",
+							 @char.getGender(),
+							 "]"
+						});
+					}
+					if (global::Char.myCharz().charFocus != null && global::Char.myCharz().charFocus.cName == @char.cName)
+					{
+						g.setColor(14155776);
+						g.drawLine(global::Char.myCharz().cx - GameScr.cmx, global::Char.myCharz().cy - GameScr.cmy + 1, @char.cx - GameScr.cmx, @char.cy - GameScr.cmy);
+						mFont.tahoma_7b_yellow.drawString(g, (i + 1).ToString() + ". " + str, GameCanvas.w - widthRect + 2, num, 0);
+
+						paintCharInfo(g, @char);
+					}
+					else
+					{
+						mFont.tahoma_7.drawString(g, (i + 1).ToString() + ". " + str, GameCanvas.w - widthRect + 2, num, 0);
+					}
+					num += heightRect + 1;
+				}
+			}
 		}
 	}
 }
