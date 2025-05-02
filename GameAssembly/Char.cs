@@ -970,7 +970,7 @@ public class Char : IMapObject
 
 	public bool isPet;
 
-	private bool isMiniPet;
+	public bool isMiniPet;
 
 	private int iiii;
 
