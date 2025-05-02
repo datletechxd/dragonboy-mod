@@ -8416,4 +8416,17 @@ public class Char : IMapObject
 		}
 		Res.err("===== tim thay DanhHieu ve danh hieu ra");
 	}
+
+	public string getGender()
+	{
+		if (this.cgender == 0)
+		{
+			return "TD";
+		}
+		if (this.cgender == 1)
+		{
+			return "NM";
+		}
+		return "XD";
+	}
 }
