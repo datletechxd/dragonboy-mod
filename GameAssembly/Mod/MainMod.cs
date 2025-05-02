@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace GameAssembly.Mod
 {
@@ -30,6 +31,16 @@ namespace GameAssembly.Mod
 
 		public static void onChatFromMe(String text)
 		{
+			if (text.Contains("ahsnm"))
+			{
+				AutoSkill.isAutoBuff = !AutoSkill.isAutoBuff;
+				if (AutoSkill.isAutoBuff)
+				{
+					new Thread(new ThreadStart(AutoSkill.autoUseSkillBuff)).Start();
+				}
+				GameScr.info1.addInfo("Auto hồi sinh namec: " + (AutoSkill.isAutoBuff ? "On" : "Off"), 0);
+				text = string.Empty;
+			}
 		}
 
 		private static void getListCharsInMap()
