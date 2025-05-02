@@ -31,5 +31,18 @@ namespace GameAssembly.Mod
 			mFont.tahoma_7b_white.drawString(g, "Time: " + DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy"), 25, GameCanvas.h - 210, 0);
 			int num = GameCanvas.h - 180;
 		}
+
+		public static void paintCharInfo(mGraphics g, global::Char ch)
+		{
+			mFont.tahoma_7b_red.drawString(g, string.Concat(new string[]
+			{
+				 ch.cName,
+				 " [",
+				 NinjaUtil.getMoneys((long)ch.cHP),
+				 "/",
+				 NinjaUtil.getMoneys((long)ch.cHPFull),
+				 "]"
+			}), GameCanvas.w / 2, 30, 2);
+		}
 	}
 }
