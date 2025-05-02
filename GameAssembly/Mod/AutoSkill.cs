@@ -17,5 +17,12 @@ namespace GameAssembly.Mod
 			}
 			return _Instance;
 		}
+
+		public static MyVector getMyVector()
+		{
+			MyVector myVector = new MyVector();
+			myVector.addElement(global::Char.myCharz());
+			return myVector;
+		}
 	}
 }
