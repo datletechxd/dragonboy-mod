@@ -28,6 +28,10 @@ namespace GameAssembly.Mod
 			global::Char.myCharz().cspeed = runSpeed;
 		}
 
+		public static void onChatFromMe(String text)
+		{
+		}
+
 		private static void getListCharsInMap()
 		{
 			listCharsInMap.Clear();
