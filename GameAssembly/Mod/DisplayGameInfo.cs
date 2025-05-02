@@ -32,6 +32,11 @@ namespace GameAssembly.Mod
 			int num = GameCanvas.h - 180;
 		}
 
+		public static bool isBoss(global::Char ch)
+		{
+			return ch.cName != null && ch.cName != "" && !ch.isPet && !ch.isMiniPet && char.IsUpper(char.Parse(ch.cName.Substring(0, 1))) && ch.cName != "Trọng tài" && !ch.cName.StartsWith("#") && !ch.cName.StartsWith("$");
+		}
+
 		public static void paintCharInfo(mGraphics g, global::Char ch)
 		{
 			mFont.tahoma_7b_red.drawString(g, string.Concat(new string[]
