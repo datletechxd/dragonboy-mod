@@ -29,7 +29,7 @@ namespace GameAssembly.Mod
 			global::Char.myCharz().cspeed = runSpeed;
 		}
 
-		public static void onChatFromMe(String text)
+		public static bool onChatFromMe(String text)
 		{
 			if (text.Contains("ahsnm"))
 			{
