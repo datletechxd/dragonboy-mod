@@ -65,6 +65,8 @@ namespace GameAssembly.Mod
 			if (GameCanvas.keyAsciiPress == Hotkeys.L)
 			{
 				GameCanvas.loginScr.backToRegister();
+
+				return true;
 			}
 			return false;
 		}
