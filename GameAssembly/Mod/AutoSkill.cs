@@ -23,6 +23,14 @@ namespace GameAssembly.Mod
 			return _Instance;
 		}
 
+		public static void update()
+		{
+			if (isAutoBuff)
+			{
+				autoUseSkillBuff();
+			}
+		}
+
 		public static MyVector getMyVector()
 		{
 			MyVector myVector = new MyVector();
@@ -43,20 +51,16 @@ namespace GameAssembly.Mod
 
 		public static void autoUseSkillBuff()
 		{
-			while (isAutoBuff)
+			Skill skill;
+			if (hasSkill(out skill))
 			{
-				Skill skill;
-				if (hasSkill(out skill))
+				if (mSystem.currentTimeMillis() - skill.lastTimeUseThisSkill > skill.coolDown)
 				{
-					if (mSystem.currentTimeMillis() - skill.lastTimeUseThisSkill > skill.coolDown)
-					{
-						Service.gI().selectSkill((int)ID_SKILL_BUFF);
-						Service.gI().sendPlayerAttack(new MyVector(), getMyVector(), -1);
-						Service.gI().selectSkill((int)global::Char.myCharz().myskill.template.id);
-						skill.lastTimeUseThisSkill = mSystem.currentTimeMillis();
-					}
+					Service.gI().selectSkill((int)ID_SKILL_BUFF);
+					Service.gI().sendPlayerAttack(new MyVector(), getMyVector(), -1);
+					Service.gI().selectSkill((int)global::Char.myCharz().myskill.template.id);
+					skill.lastTimeUseThisSkill = mSystem.currentTimeMillis();
 				}
-				Thread.Sleep(skill.coolDown);
 			}
 		}
 	}

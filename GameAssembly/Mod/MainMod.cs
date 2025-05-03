@@ -28,6 +28,7 @@ namespace GameAssembly.Mod
 		{
 			getListCharsInMap();
 			global::Char.myCharz().cspeed = runSpeed;
+			AutoSkill.update();
 		}
 
 		public static bool onChatFromMe(String text)
