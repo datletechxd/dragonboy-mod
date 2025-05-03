@@ -37,10 +37,6 @@ namespace GameAssembly.Mod
 			if (text.Contains("ahsnm"))
 			{
 				AutoSkill.isAutoBuff = !AutoSkill.isAutoBuff;
-				if (AutoSkill.isAutoBuff)
-				{
-					new Thread(new ThreadStart(AutoSkill.autoUseSkillBuff)).Start();
-				}
 				GameScr.info1.addInfo("Auto hồi sinh namec: " + (AutoSkill.isAutoBuff ? "On" : "Off"), 0);
 				text = string.Empty;
 
