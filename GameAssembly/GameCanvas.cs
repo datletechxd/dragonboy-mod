@@ -1259,7 +1259,7 @@ public class GameCanvas : IActionListener
 		int gW = GameScr.gW;
 		int gH = GameScr.gH;
 		g.translate(-g.getTranslateX(), -g.getTranslateY());
-		g.setColor(0);
+		g.setColor(999999999);
 		g.fillRect(0, 0, w, h);
 	}
 
