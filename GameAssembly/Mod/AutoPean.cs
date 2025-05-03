@@ -9,6 +9,10 @@ namespace GameAssembly.Mod
 	{
 		public static AutoPean _Instance;
 
+		public static bool isAutoRequestPean;
+
+		public static long lastTimeRequestedPean;
+
 		public static AutoPean getInstance()
 		{
 			if (_Instance == null)
@@ -16,6 +20,23 @@ namespace GameAssembly.Mod
 				_Instance = new AutoPean();
 			}
 			return _Instance;
+		}
+
+		public static void update()
+		{
+			if (isAutoRequestPean)
+			{
+				autoRequestPean();
+			}
+		}
+
+		private static void autoRequestPean()
+		{
+			if (mSystem.currentTimeMillis() - AutoPean.lastTimeRequestedPean >= 301000L)
+			{
+				AutoPean.lastTimeRequestedPean = mSystem.currentTimeMillis();
+				Service.gI().clanMessage(1, "", -1);
+			}
 		}
 	}
 }

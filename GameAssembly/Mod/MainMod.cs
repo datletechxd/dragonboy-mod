@@ -29,6 +29,7 @@ namespace GameAssembly.Mod
 			getListCharsInMap();
 			global::Char.myCharz().cspeed = runSpeed;
 			AutoSkill.update();
+			AutoPean.update();
 		}
 
 		public static bool onChatFromMe(String text)
@@ -41,6 +42,14 @@ namespace GameAssembly.Mod
 					new Thread(new ThreadStart(AutoSkill.autoUseSkillBuff)).Start();
 				}
 				GameScr.info1.addInfo("Auto hồi sinh namec: " + (AutoSkill.isAutoBuff ? "On" : "Off"), 0);
+				text = string.Empty;
+
+				return true;
+			}
+			if (text.Contains("rp"))
+			{
+				AutoPean.isAutoRequestPean = !AutoPean.isAutoRequestPean;
+				GameScr.info1.addInfo("Auto xin đậu: " + (AutoPean.isAutoRequestPean ? "On" : "Off"), 0);
 				text = string.Empty;
 
 				return true;
