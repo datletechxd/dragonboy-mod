@@ -6759,7 +6759,6 @@ public class GameScr : mScreen, IChatable
 
 	public void onChatFromMe(string text, string to)
 	{
-		MainMod.onChatFromMe(text);
 		Res.outz("CHAT");
 		if (!isPaintMessage || GameCanvas.isTouch)
 		{
