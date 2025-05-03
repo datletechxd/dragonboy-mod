@@ -39,26 +39,24 @@ namespace GameAssembly.Mod
 				AutoSkill.isAutoBuff = !AutoSkill.isAutoBuff;
 				GameScr.info1.addInfo("Auto hồi sinh namec: " + (AutoSkill.isAutoBuff ? "On" : "Off"), 0);
 				text = string.Empty;
-
-				return true;
 			}
 			if (text.Contains("rp"))
 			{
 				AutoPean.isAutoRequestPean = !AutoPean.isAutoRequestPean;
 				GameScr.info1.addInfo("Auto xin đậu: " + (AutoPean.isAutoRequestPean ? "On" : "Off"), 0);
 				text = string.Empty;
-
-				return true;
 			}
 			if (text.Contains("dp"))
 			{
 				AutoPean.isAutoDonatePean = !AutoPean.isAutoDonatePean;
 				GameScr.info1.addInfo("Auto cho đậu: " + (AutoPean.isAutoDonatePean ? "On" : "Off"), 0);
 				text = string.Empty;
-
-				return true;
 			}
-			return false;
+			else
+			{
+				return false;
+			}
+			return true;
 		}
 
 		public static bool updateKey(int unused)
