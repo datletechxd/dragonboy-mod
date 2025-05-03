@@ -6339,11 +6339,14 @@ public class Panel : IActionListener, IChatable
 		}
 		if (Char.myPetz().cMaxStamina > 0)
 		{
-			mFont.tahoma_7_yellow.drawString(g, mResources.vitality, X + 60, 38, mFont.LEFT, mFont.tahoma_7_grey);
-			g.drawImage(GameScr.imgMPLost, X + 100, 41, 0);
-			int num = Char.myPetz().cStamina * mGraphics.getImageWidth(GameScr.imgMP) / Char.myPetz().cMaxStamina;
-			g.setClip(100, X + 41, num, 20);
-			g.drawImage(GameScr.imgMP, X + 100, 41, 0);
+			mFont.tahoma_7_yellow.drawString(g, string.Concat(new object[]
+			{
+				mResources.vitality,
+				": ",
+				NinjaUtil.getMoneys((long)Char.myPetz().cStamina),
+				" / ",
+				NinjaUtil.getMoneys((long)Char.myPetz().cMaxStamina)
+			}), this.X + 60, 38, mFont.LEFT, mFont.tahoma_7_grey);
 		}
 		g.setClip(0, 0, GameCanvas.w, GameCanvas.h);
 	}
