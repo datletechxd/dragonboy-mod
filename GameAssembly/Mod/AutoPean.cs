@@ -32,9 +32,9 @@ namespace GameAssembly.Mod
 
 		private static void autoRequestPean()
 		{
-			if (mSystem.currentTimeMillis() - AutoPean.lastTimeRequestedPean >= 301000L)
+			if (mSystem.currentTimeMillis() - lastTimeRequestedPean >= 301000L)
 			{
-				AutoPean.lastTimeRequestedPean = mSystem.currentTimeMillis();
+				lastTimeRequestedPean = mSystem.currentTimeMillis();
 				Service.gI().clanMessage(1, "", -1);
 			}
 		}
