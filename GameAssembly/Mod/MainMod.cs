@@ -40,7 +40,10 @@ namespace GameAssembly.Mod
 				}
 				GameScr.info1.addInfo("Auto hồi sinh namec: " + (AutoSkill.isAutoBuff ? "On" : "Off"), 0);
 				text = string.Empty;
+
+				return true;
 			}
+			return false;
 		}
 
 		private static void getListCharsInMap()
