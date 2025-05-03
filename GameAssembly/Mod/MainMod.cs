@@ -50,6 +50,14 @@ namespace GameAssembly.Mod
 
 				return true;
 			}
+			if (text.Contains("dp"))
+			{
+				AutoPean.isAutoDonatePean = !AutoPean.isAutoDonatePean;
+				GameScr.info1.addInfo("Auto cho đậu: " + (AutoPean.isAutoDonatePean ? "On" : "Off"), 0);
+				text = string.Empty;
+
+				return true;
+			}
 			return false;
 		}
 

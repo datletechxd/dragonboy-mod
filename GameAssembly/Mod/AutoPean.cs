@@ -13,6 +13,8 @@ namespace GameAssembly.Mod
 
 		public static long lastTimeRequestedPean;
 
+		public static bool isAutoDonatePean;
+
 		public static AutoPean getInstance()
 		{
 			if (_Instance == null)
@@ -28,6 +30,10 @@ namespace GameAssembly.Mod
 			{
 				autoRequestPean();
 			}
+			if (isAutoDonatePean)
+			{
+				autoDonatePean();
+			}
 		}
 
 		private static void autoRequestPean()
@@ -36,6 +42,19 @@ namespace GameAssembly.Mod
 			{
 				lastTimeRequestedPean = mSystem.currentTimeMillis();
 				Service.gI().clanMessage(1, "", -1);
+			}
+		}
+
+		private static void autoDonatePean()
+		{
+			for (int i = 0; i < ClanMessage.vMessage.size(); i++)
+			{
+				ClanMessage clanMessage = (ClanMessage)ClanMessage.vMessage.elementAt(i);
+				if (clanMessage.maxCap != 0 && clanMessage.playerName != global::Char.myCharz().cName && clanMessage.recieve != clanMessage.maxCap)
+				{
+					Service.gI().clanDonate(clanMessage.id);
+					return;
+				}
 			}
 		}
 	}
