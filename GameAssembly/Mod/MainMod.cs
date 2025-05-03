@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using GameAssembly.Mod.Utils;
 
 namespace GameAssembly.Mod
 {
@@ -48,6 +49,16 @@ namespace GameAssembly.Mod
 
 		public static bool updateKey(int unused)
 		{
+			if (GameCanvas.keyAsciiPress == Hotkeys.H)
+			{
+				AutoSkill.isAutoBuff = !AutoSkill.isAutoBuff;
+				if (AutoSkill.isAutoBuff)
+				{
+					new Thread(new ThreadStart(AutoSkill.autoUseSkillBuff)).Start();
+				}
+				GameScr.info1.addInfo("Auto hồi sinh namec: " + (AutoSkill.isAutoBuff ? "On" : "Off"), 0);
+				return true;
+			}
 			return false;
 		}
 
