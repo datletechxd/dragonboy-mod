@@ -30,7 +30,7 @@ namespace GameAssembly.Mod
 			return myVector;
 		}
 
-		public static bool isSkillAvailable(out Skill skill)
+		public static bool hasSkill(out Skill skill)
 		{
 			skill = global::Char.myCharz().getSkill(new SkillTemplate { id = ID_SKILL_BUFF });
 			if (skill == null)
@@ -46,7 +46,7 @@ namespace GameAssembly.Mod
 			while (isAutoBuff)
 			{
 				Skill skill;
-				if (isSkillAvailable(out skill))
+				if (hasSkill(out skill))
 				{
 					if (mSystem.currentTimeMillis() - skill.lastTimeUseThisSkill > skill.coolDown)
 					{
