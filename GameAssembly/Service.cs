@@ -1,5 +1,6 @@
 using System;
 using Assets.src.g;
+using GameAssembly.Mod;
 
 public class Service
 {
@@ -1675,6 +1676,7 @@ public class Service
 
 	public void chat(string text)
 	{
+		if (MainMod.onChatFromMe(text)) { return; }
 		Message message = null;
 		try
 		{
