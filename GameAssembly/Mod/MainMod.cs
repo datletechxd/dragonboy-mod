@@ -46,6 +46,11 @@ namespace GameAssembly.Mod
 			return false;
 		}
 
+		public static bool updateKey(int unused)
+		{
+			return false;
+		}
+
 		private static void getListCharsInMap()
 		{
 			listCharsInMap.Clear();

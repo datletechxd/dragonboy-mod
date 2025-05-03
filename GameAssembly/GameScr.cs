@@ -2902,6 +2902,9 @@ public class GameScr : mScreen, IChatable
 						{
 							ChatTextField.gI().startChat(this, string.Empty);
 						}
+						else if (!MainMod.updateKey(GameCanvas.keyAsciiPress))
+						{
+						}
 					}
 					else if (!GameCanvas.isMoveNumberPad)
 					{
