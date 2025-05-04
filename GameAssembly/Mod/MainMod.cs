@@ -34,19 +34,19 @@ namespace GameAssembly.Mod
 
 		public static bool onChatFromMe(String text)
 		{
-			if (text.Contains("ahsnm"))
+			if (text.Equals("ahsnm"))
 			{
 				AutoSkill.isAutoBuff = !AutoSkill.isAutoBuff;
 				GameScr.info1.addInfo("Auto hồi sinh namec: " + (AutoSkill.isAutoBuff ? "On" : "Off"), 0);
 				text = string.Empty;
 			}
-			if (text.Contains("rp"))
+			if (text.Equals("rp"))
 			{
 				AutoPean.isAutoRequestPean = !AutoPean.isAutoRequestPean;
 				GameScr.info1.addInfo("Auto xin đậu: " + (AutoPean.isAutoRequestPean ? "On" : "Off"), 0);
 				text = string.Empty;
 			}
-			if (text.Contains("dp"))
+			if (text.Equals("dp"))
 			{
 				AutoPean.isAutoDonatePean = !AutoPean.isAutoDonatePean;
 				GameScr.info1.addInfo("Auto cho đậu: " + (AutoPean.isAutoDonatePean ? "On" : "Off"), 0);
