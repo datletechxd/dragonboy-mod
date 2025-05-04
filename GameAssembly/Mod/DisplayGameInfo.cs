@@ -53,6 +53,10 @@ namespace GameAssembly.Mod
 				 NinjaUtil.getMoneys((long)ch.cHPFull),
 				 "]"
 			}), GameCanvas.w / 2, 30, 2);
+			if (ch.isFreez)
+			{
+				mFont.tahoma_7b_red.drawString(g, "Bị TDHS: " + ch.freezSeconds.ToString() + " giây", GameCanvas.w / 2, 40, 2);
+			}
 		}
 
 		public static void paintListCharsInMap(mGraphics g)
