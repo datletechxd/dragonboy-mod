@@ -34,6 +34,7 @@ namespace GameAssembly.Mod
 			{
 				autoDonatePean();
 			}
+			autoHarvestPean();
 		}
 
 		private static void autoRequestPean()
@@ -63,6 +64,38 @@ namespace GameAssembly.Mod
 			if (info.Equals("Sư phụ ơi cho con đậu thần"))
 			{
 				GameScr.gI().doUseHP();
+			}
+		}
+
+		private static void autoHarvestPean()
+		{
+			if (TileMap.mapID != 21 && TileMap.mapID != 22 && TileMap.mapID != 23)
+			{
+				return;
+			}
+			int num = 0;
+			for (int i = 0; i < global::Char.myCharz().arrItemBox.Length; i++)
+			{
+				if (global::Char.myCharz().arrItemBox[i] != null && global::Char.myCharz().arrItemBox[i].template.type == 6)
+				{
+					num += global::Char.myCharz().arrItemBox[i].quantity;
+				}
+			}
+			if (num < 20 && GameCanvas.gameTick % 100 == 0)
+			{
+				for (int j = 0; j < global::Char.myCharz().arrItemBag.Length; j++)
+				{
+					if (global::Char.myCharz().arrItemBag[j] != null && global::Char.myCharz().arrItemBag[j].template.type == 6)
+					{
+						Service.gI().getItem(1, (sbyte)j);
+						break;
+					}
+				}
+			}
+			if (GameScr.gI().magicTree.currPeas > 0 && (GameScr.hpPotion < 10 || num < 20) && GameCanvas.gameTick % 200 == 0)
+			{
+				Service.gI().openMenu(4);
+				Service.gI().menu(4, 0, 0);
 			}
 		}
 	}
