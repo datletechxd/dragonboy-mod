@@ -1,6 +1,7 @@
 using System;
 using Assets.src.e;
 using Assets.src.g;
+using GameAssembly.Mod;
 using UnityEngine;
 
 public class Char : IMapObject
@@ -1433,6 +1434,7 @@ public class Char : IMapObject
 
 	public void addInfo(string info)
 	{
+		AutoPean.autoUsePeanForPet(info);
 		if (chatInfo == null)
 		{
 			chatInfo = new Info();

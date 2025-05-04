@@ -57,5 +57,13 @@ namespace GameAssembly.Mod
 				}
 			}
 		}
+
+		public static void autoUsePeanForPet(string info)
+		{
+			if (info.Equals("Sư phụ ơi cho con đậu thần"))
+			{
+				GameScr.gI().doUseHP();
+			}
+		}
 	}
 }
