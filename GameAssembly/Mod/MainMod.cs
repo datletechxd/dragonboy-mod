@@ -13,6 +13,8 @@ namespace GameAssembly.Mod
 
 		public static List<global::Char> listCharsInMap = new List<global::Char>();
 
+		public static List<Boss> listBosses = new List<Boss>();
+
 		public static int runSpeed = 8;
 
 		public static MainMod getInstance()
