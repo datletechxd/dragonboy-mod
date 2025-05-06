@@ -22,6 +22,7 @@ namespace GameAssembly.Mod
 		{
 			paintModInfo(g);
 			paintListCharsInMap(g);
+			paintListBosses(g);
 		}
 
 		public static void paintModInfo(mGraphics g)
@@ -105,6 +106,18 @@ namespace GameAssembly.Mod
 					}
 					num += heightRect + 1;
 				}
+			}
+		}
+
+		public static void paintListBosses(mGraphics g)
+		{
+			int num = 42;
+			for (int i = 0; i < MainMod.listBosses.Count; i++)
+			{
+				g.setColor(2721889, 0.5f);
+				g.fillRect(GameCanvas.w - 23, num + 2, 21, 9);
+				MainMod.listBosses[i].paint(g, GameCanvas.w - 2, num, mFont.RIGHT);
+				num += 10;
 			}
 		}
 	}
