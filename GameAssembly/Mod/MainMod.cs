@@ -48,7 +48,7 @@ namespace GameAssembly.Mod
 				GameScr.info1.addInfo("Auto xin đậu: " + (AutoPean.isAutoRequestPean ? "On" : "Off"), 0);
 				text = string.Empty;
 			}
-			if (text.Equals("dp"))
+			if (text.Equals("chodau"))
 			{
 				AutoPean.isAutoDonatePean = !AutoPean.isAutoDonatePean;
 				GameScr.info1.addInfo("Auto cho đậu: " + (AutoPean.isAutoDonatePean ? "On" : "Off"), 0);
