@@ -14,7 +14,7 @@ namespace GameAssembly.Mod.Utils
 			Service.gI().charMove();
 		}
 
-		public static void teleportToFocus()
+		public static void teleportToTarget()
 		{
 			if (global::Char.myCharz().charFocus != null)
 			{
