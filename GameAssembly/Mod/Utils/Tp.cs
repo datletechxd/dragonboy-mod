@@ -26,6 +26,16 @@ namespace GameAssembly.Mod.Utils
 				teleportCoordinates(global::Char.myCharz().npcFocus.cx, global::Char.myCharz().npcFocus.cy - 3);
 				return;
 			}
+			if (global::Char.myCharz().itemFocus != null)
+			{
+				teleportCoordinates(global::Char.myCharz().itemFocus.x, global::Char.myCharz().itemFocus.y);
+				return;
+			}
+			if (global::Char.myCharz().mobFocus != null)
+			{
+				teleportCoordinates(global::Char.myCharz().mobFocus.x, global::Char.myCharz().mobFocus.y);
+				return;
+			}
 			GameScr.info1.addInfo("Không Có Mục Tiêu!", 0);
 		}
 	}
