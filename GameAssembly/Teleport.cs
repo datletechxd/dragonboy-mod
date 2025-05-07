@@ -172,6 +172,14 @@ public class Teleport
 
 	public void update()
 	{
+		if (this.isDown)
+		{
+			this.y = this.y2;
+		}
+		else if (this.isUp)
+		{
+			this.y = -80;
+		}
 		if (planet > 2 && paintFire && y != -80)
 		{
 			if (isDown && tPrepare == 0)
