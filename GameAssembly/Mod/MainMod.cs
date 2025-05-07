@@ -42,7 +42,7 @@ namespace GameAssembly.Mod
 				GameScr.info1.addInfo("Auto hồi sinh namec: " + (AutoSkill.isAutoBuff ? "On" : "Off"), 0);
 				text = string.Empty;
 			}
-			if (text.Equals("rp"))
+			if (text.Equals("xindau"))
 			{
 				AutoPean.isAutoRequestPean = !AutoPean.isAutoRequestPean;
 				GameScr.info1.addInfo("Auto xin đậu: " + (AutoPean.isAutoRequestPean ? "On" : "Off"), 0);
