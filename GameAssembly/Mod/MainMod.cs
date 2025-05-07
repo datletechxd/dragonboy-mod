@@ -76,6 +76,11 @@ namespace GameAssembly.Mod
 
 				return true;
 			}
+			if (GameCanvas.keyAsciiPress == Hotkeys.T)
+			{
+				Tp.teleportToFocus();
+				return true;
+			}
 			return false;
 		}
 

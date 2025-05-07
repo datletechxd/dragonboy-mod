@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GameAssembly.Mod.Utils
 {
-	internal class Teleport
+	internal class Tp
 	{
 		public static void teleportCoordinates(int x, int y)
 		{
