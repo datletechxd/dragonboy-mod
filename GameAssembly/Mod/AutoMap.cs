@@ -9,6 +9,18 @@ namespace GameAssembly.Mod
 	{
 		public static AutoMap _Instance;
 
+		private static int[] idMapsNamek;
+
+		private static int[] idMapsXayda;
+
+		private static int[] idMapsTraiDat;
+
+		private static int[] idMapsTuongLai;
+
+		private static int[] idMapsCold;
+
+		private static int[] idMapsNappa;
+
 		public static AutoMap getInstance()
 		{
 			if (_Instance == null)
