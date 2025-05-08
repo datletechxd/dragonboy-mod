@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using GameAssembly.Mod.Utils;
 
 namespace GameAssembly.Mod
 {
@@ -67,6 +68,7 @@ namespace GameAssembly.Mod
 			int heightRect = 9;
 			for (int i = 0; i < MainMod.listCharsInMap.Count; i++)
 			{
+				Tp.teleportToCharInList(widthRect, heightRect, i);
 				global::Char @char = MainMod.listCharsInMap[i];
 				g.setColor(2721889, 0.5f);
 				g.fillRect(GameCanvas.w - widthRect, num + 2, widthRect - 2, heightRect);

@@ -38,5 +38,32 @@ namespace GameAssembly.Mod.Utils
 			}
 			GameScr.info1.addInfo("Không Có Mục Tiêu!", 0);
 		}
+
+		public static void teleportToCharInList(int widthRect, int heightRect, int i)
+		{
+			if (GameCanvas.isPointerHoldIn(GameCanvas.w - widthRect, 95 + (heightRect + 1) * i, widthRect, heightRect))
+			{
+				GameCanvas.isPointerJustDown = false;
+				if (GameCanvas.isPointerClick && GameCanvas.isPointerJustRelease)
+				{
+					global::Char @char = MainMod.listCharsInMap[i];
+					if (global::Char.myCharz().charFocus != null && global::Char.myCharz().charFocus.cName == @char.cName)
+					{
+						teleportCoordinates(global::Char.myCharz().charFocus.cx, global::Char.myCharz().charFocus.cy);
+					}
+					else
+					{
+						Char.myCharz().mobFocus = null;
+						Char.myCharz().npcFocus = null;
+						Char.myCharz().itemFocus = null;
+						Char.myCharz().charFocus = null;
+						Char.myCharz().charFocus = @char;
+					}
+					global::Char.myCharz().currentMovePoint = null;
+					GameCanvas.clearAllPointerEvent();
+					return;
+				}
+			}
+		}
 	}
 }
