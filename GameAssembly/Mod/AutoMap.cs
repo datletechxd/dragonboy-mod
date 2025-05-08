@@ -58,6 +58,17 @@ namespace GameAssembly.Mod
 				73, 74, 75, 76, 77, 81, 82, 83, 79, 80,
 				131, 132, 133
 			};
+			addPlanetToDictionary();
+		}
+
+		private static void addPlanetToDictionary()
+		{
+			planetDictionary.Add("Trái đất", idMapsTraiDat);
+			planetDictionary.Add("Namếc", idMapsNamek);
+			planetDictionary.Add("Xayda", idMapsXayda);
+			planetDictionary.Add("Fide", idMapsNappa);
+			planetDictionary.Add("Tương lai", idMapsTuongLai);
+			planetDictionary.Add("Cold", idMapsCold);
 		}
 	}
 }
