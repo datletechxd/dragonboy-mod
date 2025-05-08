@@ -9,6 +9,8 @@ namespace GameAssembly.Mod
 	{
 		public static AutoMap _Instance;
 
+		private static Dictionary<string, int[]> planetDictionary;
+
 		private static int[] idMapsNamek;
 
 		private static int[] idMapsXayda;
