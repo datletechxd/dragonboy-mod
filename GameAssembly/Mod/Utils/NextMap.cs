@@ -20,7 +20,7 @@ namespace GameAssembly.Mod.Utils
 			Index = index;
 		}
 
-		public string GetMapName()
+		public string getMapName()
 		{
 			return TileMap.mapNames[MapID];
 		}
