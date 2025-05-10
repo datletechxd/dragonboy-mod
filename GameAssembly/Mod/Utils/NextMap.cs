@@ -74,5 +74,21 @@ namespace GameAssembly.Mod.Utils
 			Char.myCharz().cy = y;
 			Service.gI().charMove();
 		}
+
+		public void enterWaypoint(Waypoint waypoint)
+		{
+			int num = ((waypoint.maxX < 60) ? 15 : ((waypoint.minX <= TileMap.pxw - 60) ? ((waypoint.minX + waypoint.maxX) / 2) : (TileMap.pxw - 15)));
+			int maxY = waypoint.maxY;
+			if (num != -1 && maxY != -1)
+			{
+				teleportTo(num, maxY);
+				if (waypoint.isOffline)
+					Service.gI().getMapOffline();
+				else
+					Service.gI().requestChangeMap();
+			}
+			else
+				GameScr.info1.addInfo("Có lỗi xảy ra", 0);
+		}
 	}
 }
