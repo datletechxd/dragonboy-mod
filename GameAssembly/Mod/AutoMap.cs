@@ -50,8 +50,14 @@ namespace GameAssembly.Mod
 				28, 29, 30, 47, 42, 24, 46, 45, 48, 53,
 				58, 59, 60, 61, 62, 55, 56, 54, 57
 			};
-			idMapsTuongLai = new int[10] { 102, 92, 93, 94, 96, 97, 98, 99, 100, 103 };
-			idMapsCold = new int[6] { 109, 108, 107, 110, 106, 105 };
+			idMapsTuongLai = new int[10] 
+			{ 
+				102, 92, 93, 94, 96, 97, 98, 99, 100, 103 
+			};
+			idMapsCold = new int[6] 
+			{ 
+				109, 108, 107, 110, 106, 105 
+			};
 			idMapsNappa = new int[23]
 			{
 				68, 69, 70, 71, 72, 64, 65, 63, 66, 67,
