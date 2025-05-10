@@ -54,5 +54,18 @@ namespace GameAssembly.Mod.Utils
 			}
 			return waypoint;
 		}
+
+		public void teleportTo(int x, int y)
+		{
+			Char.myCharz().cx = x;
+			Char.myCharz().cy = y;
+			Service.gI().charMove();
+			Char.myCharz().cx = x;
+			Char.myCharz().cy = y + 1;
+			Service.gI().charMove();
+			Char.myCharz().cx = x;
+			Char.myCharz().cy = y;
+			Service.gI().charMove();
+		}
 	}
 }
