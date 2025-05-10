@@ -35,5 +35,24 @@ namespace GameAssembly.Mod.Utils
 			}
 			return stringBuilder.ToString().Trim();
 		}
+
+		public Waypoint getWayPoint()
+		{
+			int num = 0;
+			Waypoint waypoint;
+			while (true)
+			{
+				if (num < TileMap.vGo.size())
+				{
+					waypoint = (Waypoint)TileMap.vGo.elementAt(num);
+					if (getMapName().Equals(getMapName(waypoint.popup)))
+						break;
+					num++;
+					continue;
+				}
+				return null;
+			}
+			return waypoint;
+		}
 	}
 }
