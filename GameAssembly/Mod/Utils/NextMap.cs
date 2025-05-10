@@ -19,5 +19,10 @@ namespace GameAssembly.Mod.Utils
 			Npc = npcID;
 			Index = index;
 		}
+
+		public string GetMapName()
+		{
+			return TileMap.mapNames[MapID];
+		}
 	}
 }
