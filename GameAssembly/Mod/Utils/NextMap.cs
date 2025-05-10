@@ -57,6 +57,13 @@ namespace GameAssembly.Mod.Utils
 
 		public void teleportTo(int x, int y)
 		{
+			if (GameScr.canAutoPlay)
+			{
+				Char.myCharz().cx = x;
+				Char.myCharz().cy = y;
+				Service.gI().charMove();
+				return;
+			}
 			Char.myCharz().cx = x;
 			Char.myCharz().cy = y;
 			Service.gI().charMove();
