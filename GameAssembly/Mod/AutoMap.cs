@@ -68,6 +68,8 @@ namespace GameAssembly.Mod
 				131, 132, 133
 			};
 			addPlanetToDictionary();
+			loadLinkMaps();
+			loadLinkNPCInMaps();
 		}
 
 		private static void addPlanetToDictionary()
