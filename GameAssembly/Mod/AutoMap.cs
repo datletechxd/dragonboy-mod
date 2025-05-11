@@ -92,5 +92,40 @@ namespace GameAssembly.Mod
 					linkMaps[link[i]].Add(new NextMap(link[i + 1], -1, -1));
 			}
 		}
+
+		private static void loadLinkMaps()
+		{
+			addLinkMaps(0, 21);
+			addLinkMaps(1, 47);
+			addLinkMaps(47, 111);
+			addLinkMaps(2, 24);
+			addLinkMaps(5, 29);
+			addLinkMaps(7, 22);
+			addLinkMaps(9, 25);
+			addLinkMaps(13, 33);
+			addLinkMaps(14, 23);
+			addLinkMaps(16, 26);
+			addLinkMaps(20, 37);
+			addLinkMaps(39, 21);
+			addLinkMaps(40, 22);
+			addLinkMaps(41, 23);
+			addLinkMaps(109, 105);
+			addLinkMaps(109, 106);
+			addLinkMaps(106, 107);
+			addLinkMaps(108, 105);
+			addLinkMaps(80, 105);
+			addLinkMaps(3, 27, 28, 29, 30);
+			addLinkMaps(11, 31, 32, 33, 34);
+			addLinkMaps(17, 35, 36, 37, 38);
+			addLinkMaps(109, 108, 107, 110, 106);
+			addLinkMaps(47, 46, 45, 48);
+			addLinkMaps(131, 132, 133);
+			addLinkMaps(42, 0, 1, 2, 3, 4, 5, 6);
+			addLinkMaps(43, 7, 8, 9, 11, 12, 13, 10);
+			addLinkMaps(52, 44, 14, 15, 16, 17, 18, 20, 19);
+			addLinkMaps(53, 58, 59, 60, 61, 62, 55, 56, 54, 57);
+			addLinkMaps(68, 69, 70, 71, 72, 64, 65, 63, 66, 67, 73, 74, 75, 76, 77, 81, 82, 83, 79, 80);
+			addLinkMaps(102, 92, 93, 94, 96, 97, 98, 99, 100, 103);
+		}
 	}
 }
