@@ -127,5 +127,12 @@ namespace GameAssembly.Mod
 			addLinkMaps(68, 69, 70, 71, 72, 64, 65, 63, 66, 67, 73, 74, 75, 76, 77, 81, 82, 83, 79, 80);
 			addLinkMaps(102, 92, 93, 94, 96, 97, 98, 99, 100, 103);
 		}
+
+		private static void addLinkNPCInMaps(int currentMapID, int nextMapID, int npcID, int select)
+		{
+			if (!linkMaps.ContainsKey(currentMapID))
+				linkMaps.Add(currentMapID, new List<NextMap>());
+			linkMaps[currentMapID].Add(new NextMap(nextMapID, npcID, select));
+		}
 	}
 }
