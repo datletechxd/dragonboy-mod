@@ -134,5 +134,35 @@ namespace GameAssembly.Mod
 				linkMaps.Add(currentMapID, new List<NextMap>());
 			linkMaps[currentMapID].Add(new NextMap(nextMapID, npcID, select));
 		}
+
+		private static void loadLinkNPCInMaps()
+		{
+			addLinkNPCInMaps(19, 68, 12, 1);
+			addLinkNPCInMaps(19, 109, 12, 0);
+			addLinkNPCInMaps(24, 25, 10, 0);
+			addLinkNPCInMaps(24, 26, 10, 1);
+			addLinkNPCInMaps(24, 84, 10, 2);
+			addLinkNPCInMaps(25, 24, 11, 0);
+			addLinkNPCInMaps(25, 26, 11, 1);
+			addLinkNPCInMaps(25, 84, 11, 2);
+			addLinkNPCInMaps(26, 24, 12, 0);
+			addLinkNPCInMaps(26, 25, 12, 1);
+			addLinkNPCInMaps(26, 84, 12, 2);
+			addLinkNPCInMaps(27, 102, 38, 1);
+			addLinkNPCInMaps(27, 53, 25, 0);
+			addLinkNPCInMaps(28, 102, 38, 1);
+			addLinkNPCInMaps(29, 102, 38, 1);
+			addLinkNPCInMaps(45, 46, 19, 3);
+			addLinkNPCInMaps(52, 127, 44, 0);
+			addLinkNPCInMaps(52, 129, 23, 3);
+			addLinkNPCInMaps(52, 113, 23, 2);
+			addLinkNPCInMaps(68, 19, 12, 0);
+			addLinkNPCInMaps(80, 131, 60, 0);
+			addLinkNPCInMaps(102, 27, 38, 1);
+			addLinkNPCInMaps(113, 52, 22, 4);
+			addLinkNPCInMaps(127, 52, 44, 2);
+			addLinkNPCInMaps(129, 52, 23, 3);
+			addLinkNPCInMaps(131, 80, 60, 1);
+		}
 	}
 }
