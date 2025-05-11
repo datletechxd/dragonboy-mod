@@ -79,5 +79,18 @@ namespace GameAssembly.Mod
 			planetDictionary.Add("Tương lai", idMapsTuongLai);
 			planetDictionary.Add("Cold", idMapsCold);
 		}
+
+		private static void addLinkMaps(params int[] link)
+		{
+			for (int i = 0; i < link.Length; i++)
+			{
+				if (!linkMaps.ContainsKey(link[i]))
+					linkMaps.Add(link[i], new List<NextMap>());
+				if (i != 0)
+					linkMaps[link[i]].Add(new NextMap(link[i - 1], -1, -1));
+				if (i != link.Length - 1)
+					linkMaps[link[i]].Add(new NextMap(link[i + 1], -1, -1));
+			}
+		}
 	}
 }
