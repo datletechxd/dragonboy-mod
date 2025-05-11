@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using GameAssembly.Mod.Utils;
 
 namespace GameAssembly.Mod
 {
@@ -10,6 +11,8 @@ namespace GameAssembly.Mod
 		public static AutoMap _Instance;
 
 		private static Dictionary<string, int[]> planetDictionary;
+
+		private static Dictionary<int, List<NextMap>> linkMaps;
 
 		private static int[] idMapsNamek;
 
