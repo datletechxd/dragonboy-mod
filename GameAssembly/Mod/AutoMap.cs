@@ -170,5 +170,18 @@ namespace GameAssembly.Mod
 			addLinkNPCInMaps(129, 52, 23, 3);
 			addLinkNPCInMaps(131, 80, 60, 1);
 		}
+
+		private static string getMapName(int mapID)
+		{
+			switch (mapID)
+			{
+				case 129:
+					return TileMap.mapNames[mapID] + " 23\n[" + mapID + "]";
+				default:
+					return TileMap.mapNames[mapID] + "\n[" + mapID + "]";
+				case 113:
+					return string.Concat(new object[3] { "Siêu hạng\n[", mapID, "]" });
+			}
+		}
 	}
 }
