@@ -26,6 +26,8 @@ namespace GameAssembly.Mod
 
 		private static int[] idMapsNappa;
 
+		private static bool isXmaping;
+
 		public static AutoMap getInstance()
 		{
 			if (_Instance == null)
@@ -209,6 +211,16 @@ namespace GameAssembly.Mod
 				case 113:
 					return string.Concat(new object[3] { "Siêu hạng\n[", mapID, "]" });
 			}
+		}
+
+		public static void startXmap()
+		{
+			isXmaping = true;
+		}
+
+		public static void finishXmap()
+		{
+			isXmaping = false;
 		}
 	}
 }
