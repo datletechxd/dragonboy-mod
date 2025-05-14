@@ -215,13 +215,13 @@ namespace GameAssembly.Mod
 			}
 		}
 
-		public static void startXmap(int mapID)
+		public static void startAutoMap(int mapID)
 		{
 			isXmaping = true;
 			idMapEnd = mapID;
 		}
 
-		public static void finishXmap()
+		public static void finishAutoMap()
 		{
 			isXmaping = false;
 		}
