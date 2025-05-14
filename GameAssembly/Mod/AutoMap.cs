@@ -82,6 +82,14 @@ namespace GameAssembly.Mod
 				}
 			}
 
+		public static void showPlanetsMenu()
+		{
+			MyVector myVector = new MyVector();
+			foreach (KeyValuePair<string, int[]> item in planetDictionary)
+			{
+				myVector.addElement(new Command(item.Key, getInstance(), 1, item.Value));
+			}
+			GameCanvas.menu.startAt(myVector, 3);
 		}
 
 		private static void showMapsMenu(int[] mapIDs)
