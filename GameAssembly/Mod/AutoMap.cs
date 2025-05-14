@@ -74,6 +74,14 @@ namespace GameAssembly.Mod
 
 		public void perform(int idAction, object p)
 		{
+			switch (idAction)
+			{
+				case 1:
+					showMapsMenu((int[])p);
+					break;
+				}
+			}
+
 		}
 
 		private static void showMapsMenu(int[] mapIDs)
