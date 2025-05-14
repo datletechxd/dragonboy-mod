@@ -6,7 +6,7 @@ using GameAssembly.Mod.Utils;
 
 namespace GameAssembly.Mod
 {
-	internal class AutoMap
+	internal class AutoMap : IActionListener
 	{
 		public static AutoMap _Instance;
 
@@ -33,6 +33,10 @@ namespace GameAssembly.Mod
 				_Instance = new AutoMap();
 			}
 			return _Instance;
+		}
+
+		public void perform(int idAction, object p)
+		{
 		}
 
 		static AutoMap()
