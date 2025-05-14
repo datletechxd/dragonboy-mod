@@ -28,6 +28,8 @@ namespace GameAssembly.Mod
 
 		private static bool isXmaping;
 
+		private static int idMapEnd;
+
 		public static AutoMap getInstance()
 		{
 			if (_Instance == null)
@@ -213,9 +215,10 @@ namespace GameAssembly.Mod
 			}
 		}
 
-		public static void startXmap()
+		public static void startXmap(int mapID)
 		{
 			isXmaping = true;
+			idMapEnd = mapID;
 		}
 
 		public static void finishXmap()
