@@ -76,6 +76,17 @@ namespace GameAssembly.Mod
 		{
 		}
 
+		private static void showMapsMenu(int[] mapIDs)
+		{
+			MyVector myVector = new MyVector();
+			for (int i = 0; i < mapIDs.Length; i++)
+			{
+				if ((Char.myCharz().cgender != 0 || (mapIDs[i] != 22 && mapIDs[i] != 23)) && (Char.myCharz().cgender != 1 || (mapIDs[i] != 21 && mapIDs[i] != 23)) && (Char.myCharz().cgender != 2 || (mapIDs[i] != 21 && mapIDs[i] != 22)))
+					myVector.addElement(getMapName(mapIDs[i]));
+			}
+			GameCanvas.menu.startAt(myVector, 3);
+		}
+
 		private static void addPlanetToDictionary()
 		{
 			planetDictionary.Add("Trái đất", idMapsTraiDat);
