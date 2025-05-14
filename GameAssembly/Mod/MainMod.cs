@@ -81,6 +81,11 @@ namespace GameAssembly.Mod
 				Tp.teleportToTarget();
 				return true;
 			}
+			if (GameCanvas.keyAsciiPress == Hotkeys.X)
+			{
+				AutoMap.showPlanetsMenu();
+				return true;
+			}
 			return false;
 		}
 
