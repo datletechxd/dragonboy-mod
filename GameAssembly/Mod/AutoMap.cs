@@ -35,10 +35,6 @@ namespace GameAssembly.Mod
 			return _Instance;
 		}
 
-		public void perform(int idAction, object p)
-		{
-		}
-
 		static AutoMap()
 		{
 			idMapsNamek = new int[15]
@@ -74,6 +70,10 @@ namespace GameAssembly.Mod
 			addPlanetToDictionary();
 			loadLinkMaps();
 			loadLinkNPCInMaps();
+		}
+
+		public void perform(int idAction, object p)
+		{
 		}
 
 		private static void addPlanetToDictionary()
